@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>riv</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="css/tailwind.css">
+	</head>
+
+	<body>
+		<main id="home" class="max-w-2xl w-full p-8">
+			<h1 class="title">Add Folder Paths</h1>
+
+			<!-- Input Section -->
+			<section>
+				<form class="flex items-center" id="form-path">
+					<input type="text" class="input-path" placeholder="e.g. C:/Users/abc/Collection..." id="path" required>
+					<button type="submit" class="btn-submit">
+						Add
+					</button>
+				</form>
+
+				<p class="text">
+					Copy the folder path and paste it here
+				</p>
+				<p class="text">
+					<span class="text underline">Note:</span> Make sure it doesn't contain any " " ticks like these
+				</p>
+			</section>
+
+			<!-- Paths Section -->
+			<section class="mt-10">
+				<h1 class="title">Paths</h1>
+
+				<ul id="paths" class="space-y-3 text-gray-400 list-none list-inside">
+					<!-- Content Paths -->
+				</ul>
+			</section>
+		</main>
+
+		<main id="iv" class="hidden flex-col justify-between w-full min-h-screen relative">
+			<div class="absolute top-0 w-full h-72 group">
+				<button class="button button-close" title="Close" onClick="closeViewer()">
+					<img src="assets/close.svg" alt="close icon">
+				</button>
+			</div>
+
+			<div class="flex h-[calc(100%-64px)] items-center justify-center">
+				<img src="" alt="reference" class="max-h-full contain" id="img" />
+			</div>
+
+			<div
+				class="absolute bottom-0 left-0 z-50 flex gap-10 justify-center w-full h-16 px-8 bg-[#202020] border-t border-gray-500">
+				<div class="flex items-center justify-center gap-3">
+					<button class="button group" title="Previous image">
+						<img src="assets/prev.svg" alt="arrow left previous icon" onClick="prevImage()">
+					</button>
+					<button class="button group" title="Next image">
+						<img src="assets/next.svg" alt="arrow right next icon" onClick="nextImage()">
+					</button>
+				</div>
+
+
+				<div class="flex items-center justify-center gap-3">
+					<button class="button group" title="Set timer">
+						<img src="assets/clock.svg" alt="clock icon for set timer">
+					</button>
+					<button class="button group" title="Play/Pause timer">
+						<img src="assets/pause.svg" alt="play/pause timer icon">
+					</button>
+					<button class="button group" title="Reset timer">
+						<img src="assets/reset.svg" alt="reset timer refresh icon">
+					</button>
+				</div>
+			</div>
+		</main>
+
+		<script src="js/viewer.js"></script>
+		<script src="js/init.js"></script>
+		<script src="js/pathHandler.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,29 @@
+{
+	"name": "riv",
+	"version": "0.1.0",
+	"description": "A simple desktop app that allows a user (specifically an artist) to randomly get an image from a collection",
+	"main": "main.js",
+	"scripts": {
+		"start": "electron-forge start",
+		"package": "electron-forge package",
+		"make": "electron-forge make"
+	},
+	"keywords": [],
+	"author": "Clupai8o0",
+	"license": "ISC",
+	"dependencies": {
+		"concurrently": "^8.0.1",
+		"electron-reload": "^2.0.0-alpha.1",
+		"electron-squirrel-startup": "^1.0.0",
+		"uuid": "^9.0.0"
+	},
+	"devDependencies": {
+		"@electron-forge/cli": "^6.1.0",
+		"@electron-forge/maker-deb": "^6.1.0",
+		"@electron-forge/maker-rpm": "^6.1.0",
+		"@electron-forge/maker-squirrel": "^6.1.0",
+		"@electron-forge/maker-zip": "^6.1.0",
+		"electron": "^23.2.1",
+		"tailwindcss": "^3.3.0"
+	}
+}

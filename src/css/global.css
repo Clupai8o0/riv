@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	margin: 0;
+	text-decoration: none;
+	color: white;
+	font-size: 16px;
+	font-family: Inter, Arial, Helvetica, sans-serif;
+	font-weight: 400;
+}
+
+body {
+	background: #131313;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+@layer components {
+	.title {
+		@apply text-2xl font-semibold mb-4;
+	}
+
+	.text {
+		@apply mt-2 text-sm text-gray-500 dark:text-gray-400;
+	}
+
+	.link {
+		@apply m-0 text-base text-gray-500 dark:text-gray-400;
+	}
+
+	.btn-submit {
+		@apply text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-r-lg text-base px-5 py-[9px] dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 outline-none;
+	}
+
+	.input-path {
+		@apply border text-base rounded-l-lg outline-none block w-full px-4 py-2  bg-[#202020] border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500;
+	}
+
+	.invalid {
+		@apply text-gray-600 line-through cursor-not-allowed;
+	}
+
+	.button {
+		@apply p-2.5 bg-[#323232] rounded-full hover:bg-[#404040] focus:outline-none focus:ring-4 focus:ring-gray-500 transition-all duration-300;
+	}
+
+	.button-close {
+		@apply relative z-50 top-6 left-6 p-2.5 hidden group-hover:block focus:block;
+	}
+}
