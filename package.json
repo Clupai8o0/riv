@@ -6,9 +6,22 @@
 	"scripts": {
 		"start": "electron-forge start",
 		"package": "electron-forge package",
-		"make": "electron-forge make"
+		"make": "electron-forge make",
+		"publish": "electron-forge publish"
 	},
-	"keywords": [],
+	"keywords": [
+		"riv",
+		"random",
+		"image",
+		"viewer",
+		"art",
+		"artist",
+		"figure drawing",
+		"reference",
+		"javascript",
+		"electron",
+		"tailwind"
+	],
 	"author": "Clupai8o0",
 	"license": "ISC",
 	"dependencies": {
@@ -23,6 +36,7 @@
 		"@electron-forge/maker-rpm": "^6.1.0",
 		"@electron-forge/maker-squirrel": "^6.1.0",
 		"@electron-forge/maker-zip": "^6.1.0",
+		"@electron-forge/publisher-github": "^6.1.0",
 		"electron": "^23.2.1",
 		"tailwindcss": "^3.3.0"
 	}
