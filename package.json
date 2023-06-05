@@ -1,6 +1,6 @@
 {
 	"name": "riv",
-	"version": "1.0.0",
+	"version": "0.1.0-alpha",
 	"description": "A simple desktop app that allows a user (specifically an artist) to randomly get an image from a collection",
 	"main": "main.js",
 	"scripts": {
