@@ -1,13 +1,15 @@
 {
 	"name": "riv",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"description": "A simple desktop app that allows a user (specifically an artist) to randomly get an image from a collection",
 	"main": "main.js",
 	"scripts": {
+		"dev": "electron .",
 		"start": "electron-forge start",
 		"package": "electron-forge package",
 		"make": "electron-forge make",
-		"publish": "electron-forge publish"
+		"publish": "electron-forge publish --auth-token=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",
+		"tailwind": "npx tailwindcss -i ./src/css/global.css -o ./src/css/tailwind.css --watch"
 	},
 	"keywords": [
 		"riv",
@@ -31,13 +33,13 @@
 		"uuid": "^9.0.0"
 	},
 	"devDependencies": {
-		"@electron-forge/cli": "^6.1.0",
-		"@electron-forge/maker-deb": "^6.1.0",
-		"@electron-forge/maker-rpm": "^6.1.0",
-		"@electron-forge/maker-squirrel": "^6.1.0",
-		"@electron-forge/maker-zip": "^6.1.0",
-		"@electron-forge/publisher-github": "^6.1.0",
-		"electron": "^23.2.1",
+		"@electron-forge/cli": "^6.1.1",
+		"@electron-forge/maker-deb": "^6.1.1",
+		"@electron-forge/maker-rpm": "^6.1.1",
+		"@electron-forge/maker-squirrel": "^6.1.1",
+		"@electron-forge/maker-zip": "^6.1.1",
+		"@electron-forge/publisher-github": "^6.1.1",
+		"electron": "^23.3.5",
 		"tailwindcss": "^3.3.0"
 	}
 }

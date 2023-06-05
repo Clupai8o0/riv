@@ -52,4 +52,14 @@ body {
 	.button-close {
 		@apply relative z-50 top-6 left-6 p-2.5 hidden group-hover:block focus:block;
 	}
+
+	.radio-container {
+		@apply flex items-center hover:bg-[#323232] p-2 rounded;
+	}
+	.radio {
+		@apply w-4 h-4 text-blue-600 focus:ring-blue-600 ring-offset-gray-700 focus:ring-offset-gray-700 focus:ring-2 bg-gray-600 border-gray-500;
+	}
+	.radio-label {
+		@apply ml-2 text-lg font-medium text-gray-300;
+	}
 }

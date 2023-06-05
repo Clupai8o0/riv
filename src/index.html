@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<title>riv</title>
 
-		<link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900"
-			rel="stylesheet" />
-		<link rel="stylesheet" href="css/tailwind.css">
+		<link
+			href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/tailwind.css" />
 	</head>
 
 	<body>
@@ -20,17 +21,20 @@
 			<!-- Input Section -->
 			<section>
 				<form class="flex items-center" id="form-path">
-					<input type="text" class="input-path" placeholder="e.g. C:/Users/abc/Collection..." id="path" required>
-					<button type="submit" class="btn-submit">
-						Add
-					</button>
+					<input
+						type="text"
+						class="input-path"
+						placeholder="e.g. C:/Users/abc/Collection..."
+						id="path"
+						required
+					/>
+					<button type="submit" class="btn-submit">Add</button>
 				</form>
 
+				<p class="text">Copy the folder path and paste it here</p>
 				<p class="text">
-					Copy the folder path and paste it here
-				</p>
-				<p class="text">
-					<span class="text underline">Note:</span> Make sure it doesn't contain any " " ticks like these
+					<span class="text underline">Note:</span> Make sure it doesn't contain
+					any " " ticks like these
 				</p>
 			</section>
 
@@ -42,12 +46,25 @@
 					<!-- Content Paths -->
 				</ul>
 			</section>
+
+			<!-- Favorites Section -->
+			<!-- <section class="mt-20">
+				<h1 class="title">Favorites</h1>
+
+				<ul id="favorites" class="space-y-3 text-gray-400 list-none list-inside">
+					
+				</ul>
+			</section> -->
 		</main>
 
-		<main id="iv" class="hidden flex-col justify-between w-full min-h-screen relative">
+		<main id="iv" class="flex-col hidden justify-between w-full min-h-screen relative">
 			<div class="absolute top-0 w-full h-72 group">
-				<button class="button button-close" title="Close" onClick="closeViewer()">
-					<img src="assets/close.svg" alt="close icon">
+				<button
+					class="button button-close"
+					title="Close"
+					onClick="closeViewer()"
+				>
+					<img src="assets/close.svg" alt="close icon" />
 				</button>
 			</div>
 
@@ -56,26 +73,124 @@
 			</div>
 
 			<div
-				class="absolute bottom-0 left-0 z-50 flex gap-10 justify-center w-full h-16 px-8 bg-[#202020] border-t border-gray-500">
+				class="absolute bottom-0 left-0 z-50 flex gap-10 justify-center w-full h-16 px-8 bg-[#202020] border-t border-gray-500"
+			>
 				<div class="flex items-center justify-center gap-3">
 					<button class="button group" title="Previous image">
-						<img src="assets/prev.svg" alt="arrow left previous icon" onClick="prevImage()">
+						<img
+							src="assets/prev.svg"
+							alt="arrow left previous icon"
+							onClick="prevImage()"
+						/>
 					</button>
+					<!-- <button class="button group" title="Favorite">
+						<img
+							src="assets/heart-outline.svg"
+							alt="heart favorite filled/outline icon"
+						/>
+					</button> -->
 					<button class="button group" title="Next image">
-						<img src="assets/next.svg" alt="arrow right next icon" onClick="nextImage()">
+						<img
+							src="assets/next.svg"
+							alt="arrow right next icon"
+							onClick="nextImage()"
+						/>
 					</button>
 				</div>
 
+				<div class="flex items-center justify-center gap-3 relative">
+					<!-- Dropdown menu -->
+					<div
+						class="z-10 rounded-lg shadow absolute bottom-20 left-0 bg-[#202020]"
+						id="timer-dropdown"
+						hidden
+					>
+						<ul class="p-3 space-y-1 text-sm text-gray-700 dark:text-gray-200">
+							<li>
+								<div class="radio-container">
+									<input
+										checked
+										id="30s"
+										name="timer"
+										value="30"
+										type="radio"
+										class="radio"
+									/>
+									<label for="30s" class="radio-label">30s</label>
+								</div>
+							</li>
+							<li>
+								<div class="radio-container">
+									<input
+										id="60s"
+										name="timer"
+										value="60"
+										type="radio"
+										class="radio"
+									/>
+									<label for="60s" class="radio-label">60s</label>
+								</div>
+							</li>
+							<li>
+								<div class="radio-container">
+									<input
+										id="2min"
+										name="timer"
+										value="120"
+										type="radio"
+										class="radio"
+									/>
+									<label for="2min" class="radio-label">2min</label>
+								</div>
+							</li>
+							<li>
+								<div class="radio-container">
+									<input
+										id="5min"
+										name="timer"
+										value="300"
+										type="radio"
+										class="radio"
+									/>
+									<label for="5min" class="radio-label">5min</label>
+								</div>
+							</li>
+							<li>
+								<div class="radio-container">
+									<input
+										id="10min"
+										name="timer"
+										value="600"
+										type="radio"
+										class="radio"
+									/>
+									<label for="10min" class="radio-label">10min</label>
+								</div>
+							</li>
+							<li>
+								<div class="radio-container">
+									<input
+										id="30min"
+										name="timer"
+										value="1800"
+										type="radio"
+										class="radio"
+									/>
+									<label for="30min" class="radio-label">30min</label>
+								</div>
+							</li>
+						</ul>
+					</div>
 
-				<div class="flex items-center justify-center gap-3">
-					<button class="button group" title="Set timer">
-						<img src="assets/clock.svg" alt="clock icon for set timer">
+					<button class="button group" title="Set timer" id="timer-btn">
+						<img src="assets/clock.svg" alt="clock icon for set timer" />
 					</button>
-					<button class="button group" title="Play/Pause timer">
-						<img src="assets/pause.svg" alt="play/pause timer icon">
+					<div class="button bg-transparent" id="timer">00:30</div>
+					<button class="button group" title="Play/Pause timer" id="control-btn">
+						<img src="assets/play.svg" alt="play/pause timer icon" id="control-img" />
 					</button>
-					<button class="button group" title="Reset timer">
-						<img src="assets/reset.svg" alt="reset timer refresh icon">
+					<button class="button group" title="Reset timer" id="reset-btn">
+						<img src="assets/reset.svg" alt="reset timer refresh icon" />
 					</button>
 				</div>
 			</div>
@@ -85,5 +200,4 @@
 		<script src="js/init.js"></script>
 		<script src="js/pathHandler.js"></script>
 	</body>
-
 </html>

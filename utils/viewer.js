@@ -2,7 +2,6 @@ const fs = require("fs");
 const nodePath = require("path");
 
 let images = [];
-let randomIndices = [];
 let i = 0;
 
 function readDir(path) {
@@ -30,12 +29,11 @@ function includes(str, arr) {
 }
 
 function setImages(_, path) {
-	images = readDir(path);
-	randomIndices = images.map((_) => Math.floor(Math.random() * images.length));
+	images = readDir(path).sort(() => Math.random() - 0.5);
 }
 
 function getImage() {
-	return images[randomIndices[i]];
+	return images[i];
 }
 
 function nextImage() {
